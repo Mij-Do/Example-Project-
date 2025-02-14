@@ -159,6 +159,9 @@ main {
     display: none;
 }
 
+#back-to-top:hover {
+    background-color: #00c5c5;
+}
 /* start team */
 main .team h2, p {
     text-transform: uppercase;
@@ -168,7 +171,7 @@ main .team p {
 }
 main .team .team-member {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-content: center;
 }
 main .team div img {
@@ -196,6 +199,7 @@ main .work  .card {
     height: 400px;
     margin: 10px;
     overflow: auto;
+    border-radius: 5px;
 }
 main .work  .card:not(:first-child) {
     background-color: white;
@@ -217,6 +221,77 @@ main .work  .card div h3, h4, p {
     }
 }
 /* end work */
+
+/* start price */
+main .price {
+    margin: 100px 0;
+}
+main .price .container {
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+main .price .container div {
+    width: 100%;
+    border: #333 solid 1px;
+}
+main .price .container div:hover{
+    box-shadow: #333 5px 5px 5px;
+}
+
+main .price .container div h2 {
+    padding: 20px 0;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+main .price .container div p {
+    padding: 10px 0;
+    font-weight: bold;
+}
+main .price .container section {
+    padding: 10px 0;
+    text-align: center;
+    border: none;
+}
+main .price .container section p:nth-child(1) {
+    font-size: 35px;
+    padding: 0;
+}
+main .price .container section p:nth-child(2) {
+    color: lightgray;
+    padding: 0;
+}
+
+main .price .container section {
+    border: none;
+    padding: 20px 0;
+}
+
+main .price .container section button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+main .price .container section button:hover {
+    background-color: #00c5c5;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+    main .price .container {
+        flex-wrap: wrap;
+    }
+}
+
+/* end price */
 
 /* end main */
 
