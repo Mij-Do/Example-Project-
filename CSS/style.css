@@ -39,6 +39,7 @@ header {
 
 header nav a {
     text-decoration: none;
+    text-transform: uppercase;
     color: inherit;
     display: inline-block;
     padding: 10px 5px;
@@ -60,9 +61,7 @@ header {
 header nav .drop {
     position: relative;
 }
-/* header nav .drop:hover ul {
-    visibility: visible;
-} */
+
 header nav .drop ul {
     display: inline-block;
     width: 200px;
@@ -89,7 +88,7 @@ header nav .drop ul li:hover {
 @media (max-width: 500px) {
     header, header nav a {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
     }
 }
@@ -132,4 +131,44 @@ header nav .drop ul li:hover {
     }
 }
 /* end image */
+
+/* start main */
+main {
+    margin: 200px 0;
+    text-align: center;
+    position: relative;
+}
+
+#back-to-top {
+    background-color: #008080;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+}
+
+/* start team */
+main .team h2, p {
+    text-transform: uppercase;
+}
+main .team p {
+    margin-bottom: 100px;
+}
+main .team .team-member {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+}
+main .team div img {
+    border-radius: 50%;
+}
+/* end team */
+
+/* end main */
 
