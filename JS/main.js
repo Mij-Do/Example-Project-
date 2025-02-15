@@ -39,3 +39,14 @@ backToTop.addEventListener ('click', function () {
     });
 });
 
+
+
+function getEle(event, id) {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    } 
+}
+
