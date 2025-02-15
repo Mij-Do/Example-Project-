@@ -1,3 +1,4 @@
+// drop down 
 let drop = document.getElementById("drop");
 let item = document.getElementById("drop-item");
 
@@ -22,6 +23,8 @@ drop.addEventListener("keydown", function (event) {
     }
 });
 
+
+// back to top button
 let backToTop = document.getElementById("back-to-top");
 
 window.onscroll = function () {
@@ -40,6 +43,8 @@ backToTop.addEventListener ('click', function () {
 });
 
 
+// change the opacity and smooth scroll 
+let header = document.getElementById('header');
 
 function getEle(event, id) {
     event.preventDefault();
@@ -47,6 +52,23 @@ function getEle(event, id) {
     
     if (element) {
         element.scrollIntoView({ behavior: "smooth" });
-    } 
+
+        // on click to change the opacity of header
+        setTimeout(() => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            header.style.opacity = scrollTop < 10 ? '1' : '0.5';
+        }, 300);
+    }    
 }
 
+// on scroll to change the opacity of header
+window.addEventListener("scroll", function () {
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    header.style.opacity = scrollTop < 10 ? '1' : '0.5';
+});
+
+// time codes for footer
+let timeNow = new Date();
+let time = document.getElementById('time');
+
+time.innerHTML = timeNow.getFullYear();
