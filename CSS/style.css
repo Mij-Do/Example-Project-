@@ -245,6 +245,7 @@ main .price .container {
 main .price .container div {
     width: 100%;
     border: #333 solid 1px;
+    border-radius: 3px;
 }
 main .price .container div:hover{
     box-shadow: #333 5px 5px 5px;
@@ -301,5 +302,95 @@ main .price .container section button:hover {
 }
 
 /* end price section */
+
+/* start contact section */
+
+main .contact {
+    margin: 100px 0;
+    padding: 20px 0;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main .contact .data {
+    text-align: start;
+}
+main .contact .data h2 {
+    width: 150px;
+    border-bottom: solid 4px var(--main-color);
+}
+main .contact .data h2, h4, p {
+    margin-bottom: 10px;
+}
+
+main .contact .data .fa-solid, .fa-regular {
+    color: var(--main-color);
+}
+
+main .contact .inputs {
+    background-color: #fff;
+    box-shadow: #333 5px 5px 5px;
+    padding: 20px 0;
+    border-radius: 3px;
+}
+main .contact .inputs input {
+    display: block;
+    width: 400px;
+    margin: 10px;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px #333;
+    transition: 0.5s;
+}
+main .contact .inputs input:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+main .contact .inputs .submit {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main .contact .inputs .submit div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main .contact .inputs .submit input[type="checkbox"] {
+    width: 10px;
+    transform: scale(1.5);
+}
+
+main .contact .inputs .submit button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+main .contact .inputs .submit button:hover {
+    background-color: #00c5c5;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+    main .contact {
+        flex-direction: column;
+    }
+    main .contact .data {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    main .contact .data h2 {
+        width: 100%;
+    }
+}
+/* end contact section */
 
 /* end main */
